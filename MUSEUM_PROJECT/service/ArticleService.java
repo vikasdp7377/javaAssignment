@@ -27,9 +27,9 @@ public class ArticleService {
 			Article newArticle = new Article(null, name, category, createdDate, creatorName);
 			boolean status = articleDao.save(newArticle);
 			if (status)
-				System.out.println("Article added Sucessfully!!");
+				System.out.println("Article added Sucessfully.....!!");
 			else
-				System.out.println("Article failed to add!!");
+				System.out.println("Article failed to add......!!");
 		} else
 			throw new ResourceAlreadyExistException("Article already exist with same name");
 	}
@@ -49,9 +49,9 @@ public class ArticleService {
 	public void deleteArticle(int id) throws SQLException {
 		Boolean status = articleDao.delete(id);
 		if (status)
-			System.out.println("Article deleted Sucessfully!!");
+			System.out.println("Article deleted Sucessfully....!!");
 		else
-			System.out.println("Article failed to delete!!");
+			System.out.println("Article failed to delete....!!");
 		
 	}
 	
@@ -65,7 +65,7 @@ public class ArticleService {
 			System.out.println("Article failed to delete!!");
 		}
 		else
-			throw new ResourceNotFoundException("Article not found with id " + id);
+			throw new ResourceNotFoundException("Article not found with id :  " + id);
 	
 		
 	}
